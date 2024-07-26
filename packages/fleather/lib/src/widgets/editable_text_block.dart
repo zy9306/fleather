@@ -138,7 +138,8 @@ class EditableTextBlock extends StatelessWidget {
                 style: theme.code.style
                     .copyWith(color: theme.code.style.color?.withOpacity(0.4)),
                 width: 32.0,
-                padding: 16.0,
+                // Fix macos not displaying the second row number
+                padding: 8.0,
                 withDot: false,
               ))
           .toList();
