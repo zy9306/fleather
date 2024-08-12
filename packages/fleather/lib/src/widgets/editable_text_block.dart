@@ -117,7 +117,7 @@ class EditableTextBlock extends StatelessWidget {
       children.map((node) {
         return _CheckboxPoint(
           value: node.style.containsSame(ParchmentAttribute.checked),
-          enabled: !readOnly,
+          enabled: true,
           onChanged: (checked) => _toggle(node, checked),
         );
       }).toList();
