@@ -175,9 +175,8 @@ class FleatherThemeData {
           fontWeight: FontWeight.w500,
         ),
       ),
-      link: TextStyle(
-        color: themeData.colorScheme.primaryContainer,
-        decoration: TextDecoration.underline,
+      link: const TextStyle(
+        color: Colors.purple,
       ),
       paragraph: TextBlockTheme(
         style: baseStyle,
