@@ -127,14 +127,16 @@ class FleatherThemeData {
     required this.horizontalRule,
   });
 
+  static const fontSize = 15.0;
+
   factory FleatherThemeData.fallback(BuildContext context) {
     final themeData = Theme.of(context);
     final defaultStyle = DefaultTextStyle.of(context);
     final baseStyle = defaultStyle.style.copyWith(
-      fontSize: 16.0,
+      fontSize: fontSize,
       height: 1.3,
     );
-    const baseSpacing = VerticalSpacing(top: 6.0, bottom: 10);
+    const baseSpacing = VerticalSpacing(top: 4, bottom: 4);
 
     String fontFamily;
     switch (themeData.platform) {
@@ -151,7 +153,7 @@ class FleatherThemeData {
     }
 
     final inlineCodeStyle = TextStyle(
-      fontSize: 14,
+      fontSize: fontSize * 0.9,
       color: themeData.colorScheme.primary.withOpacity(0.8),
       fontFamily: fontFamily,
     );
@@ -166,12 +168,12 @@ class FleatherThemeData {
         radius: const Radius.circular(2),
         style: inlineCodeStyle,
         heading1: inlineCodeStyle.copyWith(
-          fontSize: 32,
+          fontSize: fontSize * 1.7,
           fontWeight: FontWeight.w300,
         ),
-        heading2: inlineCodeStyle.copyWith(fontSize: 22),
+        heading2: inlineCodeStyle.copyWith(fontSize: fontSize * 1.5),
         heading3: inlineCodeStyle.copyWith(
-          fontSize: 18,
+          fontSize: fontSize * 1.3,
           fontWeight: FontWeight.w500,
         ),
       ),
@@ -185,57 +187,57 @@ class FleatherThemeData {
       ),
       heading1: TextBlockTheme(
         style: defaultStyle.style.copyWith(
-          fontSize: 34.0,
+          fontSize: fontSize * 1.8,
           color: defaultStyle.style.color?.withOpacity(0.70),
           height: 1.15,
-          fontWeight: FontWeight.w300,
+          fontWeight: FontWeight.w500,
         ),
-        spacing: const VerticalSpacing(top: 16.0, bottom: 0.0),
+        spacing: const VerticalSpacing(top: 18.0, bottom: 16.0),
       ),
       heading2: TextBlockTheme(
         style: TextStyle(
-          fontSize: 24.0,
+          fontSize: fontSize * 1.5,
           color: defaultStyle.style.color?.withOpacity(0.70),
           height: 1.15,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w500,
         ),
-        spacing: const VerticalSpacing(bottom: 0.0, top: 8.0),
+        spacing: const VerticalSpacing(top: 18.0, bottom: 16.0),
       ),
       heading3: TextBlockTheme(
         style: TextStyle(
-          fontSize: 20.0,
+          fontSize: fontSize * 1.3,
           color: defaultStyle.style.color?.withOpacity(0.70),
           height: 1.25,
           fontWeight: FontWeight.w500,
         ),
-        spacing: const VerticalSpacing(bottom: 0.0, top: 8.0),
+        spacing: const VerticalSpacing(top: 18.0, bottom: 16.0),
       ),
       heading4: TextBlockTheme(
         style: TextStyle(
-          fontSize: 18,
+          fontSize: fontSize * 1.2,
           color: defaultStyle.style.color?.withOpacity(0.50),
           height: 1.25,
           fontWeight: FontWeight.w500,
         ),
-        spacing: const VerticalSpacing(bottom: 0.0, top: 8.0),
+        spacing: const VerticalSpacing(top: 18.0, bottom: 16.0),
       ),
       heading5: TextBlockTheme(
         style: TextStyle(
-          fontSize: 16.0,
+          fontSize: fontSize * 1.1,
           color: defaultStyle.style.color?.withOpacity(0.70),
           height: 1.25,
           fontWeight: FontWeight.w500,
           decoration: TextDecoration.underline,
         ),
-        spacing: const VerticalSpacing(bottom: 0.0, top: 8.0),
+        spacing: const VerticalSpacing(top: 18.0, bottom: 16.0),
       ),
       heading6: TextBlockTheme(
         style: TextStyle(
-            fontSize: 16.0,
+            fontSize: fontSize,
             color: defaultStyle.style.color?.withOpacity(0.50),
             height: 1.25,
             fontWeight: FontWeight.w500),
-        spacing: const VerticalSpacing(bottom: 0.0, top: 8.0),
+        spacing: const VerticalSpacing(top: 18.0, bottom: 16.0),
       ),
       lists: TextBlockTheme(
         style: baseStyle,
@@ -259,7 +261,7 @@ class FleatherThemeData {
         style: TextStyle(
           color: themeData.colorScheme.primary.withOpacity(0.8),
           fontFamily: fontFamily,
-          fontSize: 13.0,
+          fontSize: fontSize * 0.9,
           height: 1.4,
         ),
         spacing: baseSpacing,
